@@ -1,3 +1,95 @@
-.current {
-  color: green;
+// Custom styling to complement Materialize
+
+// Active navigation item
+nav .active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+// Add some spacing
+main {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  min-height: 70vh;
+}
+
+// Card hover effects
+.card.hoverable:hover {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+// Improve post excerpt readability
+.post-excerpt {
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+// Better spacing for icons in text
+.material-icons.tiny {
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+// Card title links
+.card-title a {
+  color: #1976d2;
+  text-decoration: none;
+}
+
+.card-title a:hover {
+  text-decoration: underline;
+}
+
+// Mobile navigation
+.sidenav {
+  width: 250px;
+}
+
+// Footer spacing
+.page-footer {
+  margin-top: 3rem;
+}
+
+// Brand logo
+#logo-container {
+  font-size: 1.5rem;
+}
+
+// Code block styling
+pre {
+  background-color: #263238;
+  border-radius: 4px;
+  padding: 1.5rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+  code {
+    background-color: transparent;
+    color: #aed581;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 0;
+    border: none;
+  }
+}
+
+// Inline code styling
+code {
+  background-color: #f5f5f5;
+  color: #e91e63;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1em;
+  border: 1px solid #e0e0e0;
+}
+
+// Blockquote styling
+blockquote {
+  border-left: 4px solid #1976d2;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  color: #616161;
+  font-style: italic;
 }

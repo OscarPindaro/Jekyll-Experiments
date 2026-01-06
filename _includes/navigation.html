@@ -1,5 +1,28 @@
-<nav>
-  {% for item in site.data.navigation %}
-    <a href="{{ item.link }}"{% if page.url == item.link %} class="current"{% endif %}>{{ item.name }}</a>
-  {% endfor %}
+<nav class="blue darken-2" role="navigation">
+  <div class="nav-wrapper container">
+    <a id="logo-container" href="/" class="brand-logo">{{ site.title }}</a>
+    
+    <!-- Desktop Navigation -->
+    <ul class="right hide-on-med-and-down">
+      {% for item in site.data.navigation %}
+        <li{% if page.url == item.link %} class="active"{% endif %}>
+          <a href="{{ item.link }}">{{ item.name }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+
+    <!-- Mobile Navigation Trigger -->
+    <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+      <i class="material-icons">menu</i>
+    </a>
+  </div>
 </nav>
+
+<!-- Mobile Navigation Menu -->
+<ul id="nav-mobile" class="sidenav">
+  {% for item in site.data.navigation %}
+    <li{% if page.url == item.link %} class="active"{% endif %}>
+      <a href="{{ item.link }}">{{ item.name }}</a>
+    </li>
+  {% endfor %}
+</ul>

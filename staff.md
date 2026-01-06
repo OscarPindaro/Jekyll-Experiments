@@ -2,14 +2,26 @@
 layout: default
 title: Staff
 ---
-<h1>Staff</h1>
+<div class="section">
+  <h1 class="header">Our Staff</h1>
 
-<ul>
-  {% for author in site.authors %}
-    <li>
-      <h2><a href="{{ author.url }}">{{ author.name }}</a></h2>
-      <h3>{{ author.position }}</h3>
-      <p>{{ author.content | markdownify }}</p>
-    </li>
-  {% endfor %}
-</ul>
+  <div class="row">
+    {% for author in site.authors %}
+      <div class="col s12 m6 l4">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">{{ author.name }}</span>
+            <p class="blue-text">{{ author.position }}</p>
+            <div class="divider"></div>
+            <div class="section">
+              {{ author.content | markdownify }}
+            </div>
+          </div>
+          <div class="card-action">
+            <a href="{{ author.url }}">View Profile</a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
